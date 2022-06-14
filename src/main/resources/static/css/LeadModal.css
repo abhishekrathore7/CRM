@@ -1,0 +1,74 @@
+.bg-modal{
+    width: 70%;
+   
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal-content{
+    height: 128%;
+    width: 125%;
+    opacity: 1;
+    text-align: center;
+    font-family: inherit;
+
+    
+
+}
+input{
+    width: 49%;
+    padding: 12px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+.close{
+    position: absolute;
+
+   font-size: 42px;
+   transform: rotate(45deg);
+   cursor: pointer;
+}
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+ display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    
+  }
+  /*.drop{
+      width: 50%;
+      display: block;
+    margin-right: 150px;
+    box-sizing: border-box;
+    --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+  z-index: 1;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  
+  }
+  */
+
+select{
+  width: 51%;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
