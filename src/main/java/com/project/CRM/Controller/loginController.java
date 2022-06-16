@@ -12,7 +12,7 @@ import com.project.CRM.service.UserDataRepo;
 @Controller
 public class loginController {
 	
-//	@Autowired
+	@Autowired
 	UserDataRepo repo;
 	
 	
@@ -34,7 +34,8 @@ public class loginController {
 	@RequestMapping(value = "/saveData")
 	@ResponseBody
 	public String saveData(SignupDetails user) {
-		return "User Created Successfully";
+		repo.save(user);
+		return "Your details are saved Successfully";
 	}
 	
 	

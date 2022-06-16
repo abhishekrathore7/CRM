@@ -102,7 +102,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="/LeadData" method = "post">
           <input type="text" placeholder="Lead Owner">
           <div class="dropdown">
           <select name="Lead Status" id="dropdown_lead">
@@ -126,9 +126,9 @@
 
 
 
-      <input type="text" placeholder="Fisrt Name">
-      <input type="text" placeholder="Last Name">
-      <input type="number" placeholder="Phone">
+      <input type="text" placeholder="Fisrt Name" name = "firstName">
+      <input type="text" placeholder="Last Name" name = "lastName">
+      <input type="text" placeholder="Phone">
       <input type="text" placeholder="Company">
       <input type="text" placeholder="Email">
       <input type="text" placeholder="Address Information">
@@ -166,12 +166,9 @@
 
       <input type="text" placeholder="Description Information">
       <br><br>
-     
+     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Save changes</button>
       </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
     </div>
   </div>
 </div>
@@ -201,9 +198,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="/accountData" method = "post">
                 <h3>Account Information</h3>
-                <input type="text" placeholder="Account Owner">
+                <input type="text" placeholder="Account Owner" name = "accountOwner">
                 <input type="text" placeholder="Account Name">
                 <input type="text" placeholder="Phone">
                 <input type="text" placeholder="Fax">
@@ -239,12 +236,10 @@
                
                 <!--Copy Billing Address to Shipping Address(check box on click copy address)-->
 
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        	<button type="submit" class="btn btn-primary">Save changes</button>
             </form>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

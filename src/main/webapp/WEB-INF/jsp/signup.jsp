@@ -1,34 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="css/signup.css" >
-</head>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="css/signup.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-    <form method = "post" action = "/saveData">
-        <div class="container">
-          <h1>User Sign up</h1>
-          
-          <hr >
-      
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" id="psw" required>
-      
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-          <hr>
-      
-          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-          <button type="submit" class="registerbtn">Submit</button>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/saveData" method = "post">
+        <div class="user-details">
+          <div class="input-box">
+            
+            <span class="details" >First Name</span>
+            
+            <input type="text" placeholder="Enter your first name" required>
+           
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" placeholder="Enter your lastname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">DoB</span>
+            <input type="text" placeholder="Enter your DoB" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Contact</span>
+            <input type="text" placeholder="Enter contact" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email ID</span>
+            <input type="text" placeholder="Enter your emailId" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Company</span>
+            <input type="text" placeholder="Enter your company" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Country</span>
+            <input type="text" placeholder="Enter your country" required>
+          </div>
+          <!-- <div class="input-box">
+            <span class="details">Company</span>
+            <input type="text" placeholder="Enter your company" required>
+          </div> -->
+          <div class="input-box">
+            <span class="details">Employees</span>
+             <select name="select">
+                <option value="choose">Number of Employee</option>
+            <option value="10-20">10-20</option> 
+            <option value="20-30" selected>20-30</option>
+            <option value="30-40">30-40</option>
+          </select>
         </div>
-      
-        <div class="container signin">
-          <p>Already have an account <a href="login">Login</a>.</p>
+          <div class="input-box">
+            <span class="details">UserID</span>
+            <input type="text" placeholder="Enter your userId" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Enter your confirm password" required>
+          </div>
+        
+    
+        <div class="button">
+          <input type="submit" value="Submit">
         </div>
       </form>
+    </div>
+  </div>
+<p>Already have an account?<a href="login">Login</a></p>
 </body>
-
-
 </html>
