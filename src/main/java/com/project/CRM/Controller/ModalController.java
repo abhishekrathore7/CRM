@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.CRM.model.AccountDetails;
 import com.project.CRM.model.LeadDetails;
-import com.project.CRM.service.AccountRepo;
-import com.project.CRM.service.LeadRepo;
+import com.project.CRM.model.OppurtunityDetails;
+import com.project.CRM.model.taskDetails;
+import com.project.CRM.repository.AccountRepo;
+import com.project.CRM.repository.LeadRepo;
+import com.project.CRM.repository.OppurtunityRepo;
+import com.project.CRM.repository.TaskRepo;
 
 @Controller
 public class ModalController {
@@ -18,6 +22,12 @@ public class ModalController {
 	
 	@Autowired
 	AccountRepo acc_repo;
+	
+	@Autowired
+	OppurtunityRepo opp_repo;
+	
+	@Autowired
+	TaskRepo task_repo;
 	
 	@RequestMapping(value = "/LeadGrid")
 	public String LeadGridPage() {
@@ -46,6 +56,25 @@ public class ModalController {
 	public String accountData(AccountDetails acc) {
 		acc_repo.save(acc);
 		return "Accounts Information are saved successfully!!";
+	}
+	
+	@RequestMapping(value = "/oppurtunityData")
+	@ResponseBody
+	public String OppurtunityData(OppurtunityDetails opp) {
+		opp_repo.save(opp);
+		return "Oppurtunity Information are saved successfully!!";
+	}
+	
+	@RequestMapping(value = "/taskData")
+	@ResponseBody
+	public String taskData(taskDetails task) {
+		task_repo.save(task);
+		return "Oppurtunity Information are saved successfully!!";
+	}
+	
+	@RequestMapping(value="/calendar")
+	public String calendarPage() {
+		return "calendar";
 	}
 	
 }

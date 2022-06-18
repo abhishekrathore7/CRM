@@ -6,11 +6,24 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/oppurtunity.css">
         <style>
-        h1{
-        text-align: center;
-  		font-size: 30px;
-        }
+        
+         h1{
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+          }
+          body{
+            background-color: rgb(223, 223, 240);
+          }
+          h2{
+            text-align: center;
+            font-size: 50px;
+            font-family: sans-serif;
+
+          }
         </style>
     </head>
     <body>
@@ -77,10 +90,13 @@
             </div>
                     </li>
                     <li class="nav-item">
-        				<a class="nav-link" href="">Calendar</a>
+        				<a class="nav-link" href="calendar">Calendar</a>
       				</li>
       				<li class="nav-item">
         				<a class="nav-link" href="#">Reports</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="login">Logout</a>
       				</li>
 
 
@@ -176,6 +192,7 @@
 
 
         </nav>
+          <h2>Welcome to User Dashboard</h2>
 
 
 <!-------------------------------------------- Lead Modal -------------------------------------------->
@@ -198,9 +215,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/accountData" method = "post">
+        <form action="">
                 <h3>Account Information</h3>
-                <input type="text" placeholder="Account Owner" name = "accountOwner">
+                <input type="text" placeholder="Account Owner">
                 <input type="text" placeholder="Account Name">
                 <input type="text" placeholder="Phone">
                 <input type="text" placeholder="Fax">
@@ -236,10 +253,12 @@
                
                 <!--Copy Billing Address to Shipping Address(check box on click copy address)-->
 
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        	<button type="submit" class="btn btn-primary">Save changes</button>
             </form>
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -259,7 +278,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="/contactData">
                 <h3>Contact Information</h3>
                 <input type="text" placeholder="Contact Owner">
                 <input type="text" placeholder="Phone">
@@ -333,16 +352,16 @@
           </button>
         </div>
         <div class="modal-body">
-            <form action="">
-                <h3>Oppurtunity Information</h3>
+            <form action="/oppurtunityData" method="post">
+                <h3>Opportunity Information</h3>
                 
-                <input type="text" placeholder="Oppurtunity  Owner">
-                <input type="text" placeholder="Suraj K">
-                <input type="text" placeholder="Close Date">
-                <input type="text" placeholder="Date Picker">
-                <input type="text" placeholder="Oppurtunity Name">
-                <input type="text" placeholder="dropdown">
-                <select name="Stage" id="dropdown_stage">
+                <input type="text" name="opportunityOwner" placeholder="Oppurtunity  Owner" required>
+                <input type="text" name="surajK" placeholder="Suraj K" required>
+                <input type="text" name="closeDate" placeholder="Close Date" required>
+                <input type="text" name="datePicker" placeholder="Date Picker" required>
+                <input type="text" name="opportunityName" placeholder="Oppurtunity Name" required>
+                
+                <select name="stage" id="dropdown_stage" required>
                     <option value="Stage">Stage</option>
                     <option value="qualification">Qualification</option>
                     <option value="meeting scheduled">Meeting Scheduled</option>
@@ -353,19 +372,19 @@
                     <option value="closed lost">Closed Lost</option>
                     </select>
 
-             <input type="text" placeholder="Account Name"> <!--recheck here-->
-                <input type="text" placeholder="Probability %">
-                <input type="text" placeholder="dropdown">
-                <select name="Type" id="dropdown_type">
+             <input type="text"name="accountName" placeholder="Account Name" required> <!--recheck here-->
+                <input type="text" name="probability"placeholder="Probability %" required>
+                
+                <select name="type" id="dropdown_type" required>
                     <option value="Type">Type</option>
                     <option value="customer">Customer</option>
-                    <option value="invester">Invester</option>
+                    <option value="invester">Investor</option>
                     <option value="partner">Partner</option>
                     <option value="reseller ">Reseller</option>
                     </select>
-                <input type="text" placeholder="Amount">
+                <input type="text"name="amount" placeholder="Amount" required>
                 <h3>Additional Information</h3>
-                <select name="Lead Source" id="dropdown_source">
+                <select name="leadSource" id="dropdown_source">
                     <option value="Lead Source">Lead Source</option>
                     <option value="advertisement">Advertisement</option>
                     <option value="Employee">Employee</option>
@@ -375,19 +394,21 @@
                     <option value="social">Social</option>
                     <option value="other">Other</option>
                     </select>
-                    <input type="text" placeholder="Description">
-                <input type="text" placeholder="Next Step">
+                    <input type="text" name="descriptionOpportunity"placeholder="Description"required>
+                <input type="text" name="nextStep"placeholder="Next Step"required>
+              
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            
                
 
              </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+       
             </div>
           </div>
         </div>
-      </div>
+      
       <!----------------------New Case----------------------------------------------->
       <div class="modal fade" id="CaseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -399,7 +420,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form action="">
+              <form action="/caseData">
                 <input type="text" placeholder="Case Owner">
                 <input type="text" placeholder="Case Number"><!--should be auto generated-->
                 <input type="text" placeholder="Contact Name"><!--autocomplete on typing contact-->
@@ -471,20 +492,20 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form action="/taskData" method="post"">
                             <h2>Task Information </h2>
-                            <input type="text" placeholder="Assigned To">
-                            <input type="text" placeholder="Related To">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Subject">
-                            <input type="text" placeholder="Comments">
-                            <input type="date" placeholder="Due date">
+                            <input type="text" name="assignedTo" placeholder="Assigned To" required>
+                            <input type="text" name="relatedTo" placeholder="Related To" required>
+                            <input type="text" name=" name" placeholder="Name"required>
+                            <input type="text" name="subject"placeholder="Subject"required>
+                            <input type="text" name="comments" placeholder="Comments"required>
+                            <input type="date" name="duedate" placeholder="Due date"required>
                             <h3>Set Task Reminder </h3>
-                            <input type="text" placeholder="Reminder">
-                            <input type="date" placeholder="Date">
-                            <input type="time" placeholder="Time">
+                            <input type="text" name="reminder" placeholder="Reminder"required>
+                            <input type="date" name="date" placeholder="Date"required>
+                            <input type="time"name=" time" placeholder="Time"required>
                             <h3>Additional Information</h3>
-                            <select name="Status" id="dropdown_status">
+                            <select name="status" id="dropdown_status" required>
                                 <option value="Status">Status</option>
                                 <option value="Not started">Not started</option>
                                 <option value="in progress">In progress</option>
@@ -493,18 +514,19 @@
                                 <option value="waiting for someone else">Waiting for someone else</option>
                              </select>
             
-                             <select name="Priority" id="dropdown_priority">
+                             <select name="priority" id="dropdown_priority">
                                  <option value="normal">Normal</option>
                                  <option value="high">High</option>
                                  <option value="low">Low</option>
                              </select>
                             
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            
+                            
                              </form>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+                         
                           </div>
                         </div>
                       </div>

@@ -26,7 +26,7 @@
           </div>
           <div class="input-box">
             <span class="details">DoB</span>
-            <input type="text" name = "doB" placeholder="Enter your DoB" required>
+            <input type="text" name = "doB" placeholder="Enter your DoB in dd/mm/yyyy" required>
           </div>
           <div class="input-box">
             <span class="details">Contact</span>
@@ -53,8 +53,22 @@
             <option value="30-40">30-40</option>
           </select>
         </div>
+        <div class="input-box">
+            <span class="details">Set Secret Question</span>
+             <select name="secretQuestion">
+             <option value="choose" selected>Secret Questions</option>
+            <option value="Which City you were born in?">Which City you were born in?</option> 
+            <option value="what is your first School Name?" >what is your first School Name?</option>
+            <option value="What is your favorite food?">What is your favorite food?</option>
+          </select>
+        </div>
+         <div class="input-box">
+            <span class="details">Answer</span>
+            <input type="text" name = "answer" placeholder="Enter your answer" required>
+          </div>
+        
           <div class="input-box">
-            <span class="details">UserID</span>
+            <span class="details">UserName</span>
             <input type="text" name = "userName" placeholder="Enter your userId" required>
           </div>
           <div class="input-box">
