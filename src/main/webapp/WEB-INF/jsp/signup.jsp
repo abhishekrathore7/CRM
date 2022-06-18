@@ -17,37 +17,33 @@
             
             <span class="details" >First Name</span>
             
-            <input type="text" placeholder="Enter your first name" required>
+            <input type="text" name = "firstName" placeholder="Enter your first name" required>
            
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" placeholder="Enter your lastname" required>
+            <input type="text" name = "lastName" placeholder="Enter your lastname" required>
           </div>
           <div class="input-box">
             <span class="details">DoB</span>
-            <input type="text" placeholder="Enter your DoB" required>
+            <input type="text" name = "doB" placeholder="Enter your DoB" required>
           </div>
           <div class="input-box">
             <span class="details">Contact</span>
-            <input type="text" placeholder="Enter contact" required>
+            <input type="text" name = "phone" placeholder="Enter contact" required>
           </div>
           <div class="input-box">
             <span class="details">Email ID</span>
-            <input type="text" placeholder="Enter your emailId" required>
+            <input type="text" name = "email" placeholder="Enter your emailId" required>
           </div>
           <div class="input-box">
             <span class="details">Company</span>
-            <input type="text" placeholder="Enter your company" required>
+            <input type="text" name = "company" placeholder="Enter your company" required>
           </div>
           <div class="input-box">
             <span class="details">Country</span>
-            <input type="text" placeholder="Enter your country" required>
+            <input type="text" name = "country" placeholder="Enter your country" required>
           </div>
-          <!-- <div class="input-box">
-            <span class="details">Company</span>
-            <input type="text" placeholder="Enter your company" required>
-          </div> -->
           <div class="input-box">
             <span class="details">Employees</span>
              <select name="select">
@@ -59,11 +55,11 @@
         </div>
           <div class="input-box">
             <span class="details">UserID</span>
-            <input type="text" placeholder="Enter your userId" required>
+            <input type="text" name = "userName" placeholder="Enter your userId" required>
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <input type="text" name = "password" placeholder="Enter your password" required>
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>

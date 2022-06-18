@@ -77,7 +77,7 @@
             </div>
                     </li>
                     <li class="nav-item">
-        				<a class="nav-link" href="#">Calendar</a>
+        				<a class="nav-link" href="">Calendar</a>
       				</li>
       				<li class="nav-item">
         				<a class="nav-link" href="#">Reports</a>
