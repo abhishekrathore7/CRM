@@ -75,7 +75,7 @@ public class UserService {
 		userRepo.save(user);
 	}
 
-	public UserDetails findUserById(int id) throws CRMException{
+	public UserDetails findUserById(long id) throws CRMException{
 
 		Optional<UserDetails> optional = userRepo.findById(id);
 		UserDetails category = null;
@@ -104,7 +104,7 @@ public class UserService {
 	}
 
 	
-	int userId;
+	Long userId;
 
 	public boolean resetPassword(UserDetails user) {
 		List<UserDetails> list = completeList();

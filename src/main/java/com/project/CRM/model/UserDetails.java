@@ -13,7 +13,7 @@ public class UserDetails {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
+	private long userId;
 	@NotEmpty(message = "Name is required")
 	private String firstName;
 	private String lastName;
@@ -42,7 +42,7 @@ public class UserDetails {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
@@ -108,7 +108,7 @@ public class UserDetails {
 	public UserDetails(){
 	}
 	
-	public UserDetails(int userId, String firstName, String lastName, String doB, String phone, String email, String company,
+	public UserDetails(long userId, String firstName, String lastName, String doB, String phone, String email, String company,
 			String country, String userName, String password,String secretQuestion, String answer) {
 		super();
 		this.userId = userId;

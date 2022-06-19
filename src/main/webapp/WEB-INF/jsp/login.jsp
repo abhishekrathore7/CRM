@@ -60,6 +60,7 @@
 					<div class="msg1">${msg }</div>
 					<div class="text-center w-full p-t-23">
 						<a href="/forgotId" class="txt1"> Forgot UserName? </a> 
+						<br><br>
 						<a href="/forgotPassword" class="txt1"> Forgot password? </a>
 					</div>
 

@@ -275,7 +275,10 @@ public class AccountDetails {
 		ShippingZipPostalCode = shippingZipPostalCode;
 		ShippingCountry = shippingCountry;
 	}
-
+	
+	public AccountDetails(){
+		
+	}
 
 
 

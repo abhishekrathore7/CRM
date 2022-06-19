@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 import com.project.CRM.model.UserDetails;
 
 @Service
-public interface UserDataRepo extends JpaRepository<UserDetails, Integer>{
+public interface UserDataRepo extends JpaRepository<UserDetails, Long>{
 
 }

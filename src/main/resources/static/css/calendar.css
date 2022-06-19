@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins',sans-serif;
+  background-color: rgb(232, 232, 244);
+  
+  
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid ;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    border-color:  #9b59b6;
+color:black;
+
+
+    
+  }
+  
+  
+  input[type=text]:focus {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  input[type=datetime-local],  select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: #66b4c0;
+color:black;
+background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+  }
+  h3{
+      font-weight:bold;
+      
+  }
