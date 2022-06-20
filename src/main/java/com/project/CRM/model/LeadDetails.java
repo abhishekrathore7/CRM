@@ -193,4 +193,8 @@ public class LeadDetails {
 		this.annual_rev = annual_rev;
 		this.description = description;
 	}
+	
+	public LeadDetails() {
+		
+	}
 }

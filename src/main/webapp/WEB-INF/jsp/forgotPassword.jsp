@@ -29,7 +29,7 @@
 					<form:label  for="userId"  class="label" path = "firstName">User Name</form:label><br/>
 					<form:input id="answer" type="text" class="input1" path = "firstName" placeholder="User Name" />
 					<br /><br />
-					<form:label  for="secretQuestion1"  class="label" path = "secretQuestion">Secret Question 1</form:label>
+					<form:label  for="secretQuestion1"  class="label" path = "secretQuestion">Secret Question</form:label>
 					<form:select class = "input" path="secretQuestion" items="${secretQuestion}" id="secretQuestion1"/>
 					<form:label  for="answer"  class="label" path = "answer">Answer</form:label><br />
 					<form:input id="answer" type="text" class="input1" path = "answer" placeholder="Enter your answer" />

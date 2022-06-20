@@ -77,6 +77,15 @@ public class loginController {
 	public String forgotpassword(@ModelAttribute("command") UserDetails user) {
 		return "forgotPassword";
 	}
+
+	@RequestMapping(value = "/resetpassword", method = RequestMethod.GET)
+	public String resetpassword(@ModelAttribute("command") UserDetails user) {
+		boolean reset = userService.resetPassword(user);
+		if (reset) {
+			return "resetpassword";
+		}
+		return "forgotPassword";
+	}
 	
 	@RequestMapping("/login")
 	public String logout() {
